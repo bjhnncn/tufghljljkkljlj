@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pose Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style4.css') }}">
+</head>
+<body>
+    <div id="initial-container">
+        <button id="start-btn">Try our Virtual Fitness Center</button>
+    </div>
+    <div id="app-container">
+        <div id="video-container">
+            <img id="video" src="{{ url_for('video_feed') }}" />
+        </div>
+        <div id="controls">
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script4.js') }}"></script>
+    <script>
+        var videoFeedUrl = "{{ url_for('video_feed') }}" ;
+    </script>
+    
+</body>
+</html>

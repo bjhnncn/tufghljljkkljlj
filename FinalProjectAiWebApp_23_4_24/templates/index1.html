@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGA Gym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#our-process">Our Process</a>
+            <a href="#athlete-facts">Diet plan</a>
+            <a href="#MeetTheTeam">Meet The Team</a>
+            <a href="#Plans">Plans</a>
+            <a href="#contactUs">Contact Us</a>
+        </nav>
+        <h1>AI FITNESS WEB APP</h1>
+        <h2>"AI Fitness: Where Tech Meets Fitness"</h2>
+        <a href="#Plans" class="btn">TRY IT OUT</a>
+    </header>
+
+    <section id="our-process">
+        <h2>OUR PROCESS</h2>
+        <div class="process">
+            <div class="process-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>ANIMATED VISUAL TRAINING</h3>
+            </div>
+            <div class="process-item">
+                <i class="fas fa-flask"></i>
+                <h3>WORK HARD ON IT</h3>
+            </div>
+            <div class="process-item">
+                <i class="fas fa-user-edit"></i>
+                <h3>VIRTUAL TECHNIQUES</h3>
+            </div>
+            <div class="process-item">
+                <i class="fas fa-gem"></i>
+                <h3>ACHIEVE YOUR DESTINY</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="athlete-facts">
+        <h2>DIET PLAN</h2>
+        <div class="stats">
+            <div class="stat">
+                <h3>Beginner</h3>
+                <button onclick="openDietPlan('beginner-diet')">View Diet Plan</button>
+            </div>
+            <div class="stat">
+                <h3>Intermediate</h3>
+                <button onclick="openDietPlan('intermediate-diet')">View Diet Plan</button>
+            </div>
+            <div class="stat">
+                <h3>Professional</h3>
+                <button onclick="openDietPlan('professional-diet')">View Diet Plan</button>
+            </div>
+        </div>
+        <div id="diet-plan-content" style="display: none;"></div>
+    </section>
+
+    <section id="Plans">
+        <h2> PLANS</h2>
+        <h1>Go with the right one</h1>
+        <div class="pricing">
+            <div class="pricing-plan">
+                <h2>Diamond</h2>
+                <ul>
+                    <li>Chest</li>
+                    <li>Back</li>
+                    <li>Legs</li>
+                    <li>Arms</li>
+                    <li>Shoulder</li>
+                    <li>Cardio</li>
+                    <li>Neck</li>
+                    <li>Waist</li>
+                </ul>
+                <button onclick="window.location.href='{{ url_for('exercise') }}'">TRY NOW</button>
+
+                
+            </div>
+            <div class="pricing-plan featured">
+                <h2>Gold</h2>
+                <ul>
+                    <li>Chest</li>
+                    <li>Back</li>
+                    <li>Legs</li>
+                    <li>Arms</li>
+                    <li>Shoulder</li>
+                </ul>
+                <button onclick="window.location.href='{{ url_for('exercise1') }}'">TRY NOW</button>
+
+                
+            </div>
+            <div class="pricing-plan">
+                <h2>Silver</h2>
+                <ul>
+                    <li>Chest</li>
+                    <li>Back</li>
+                    <li>Legs</li>
+                </ul>
+                <button onclick="window.location.href='{{ url_for('exercise2') }}'">TRY NOW</button>
+
+            </div>
+        </div>
+
+        <br><br>
+        
+                
+        
+    </section>
+
+    <section id="MeetTheTeam">
+        <div class="heading-image">
+            <img src="{{ url_for('static', filename='images/bg.jpg') }}" style="height: 100px; width: 300px; margin-left: 45%;" alt="Your Team's Name">
+        </div>
+        <div class="team-container">
+            <!-- Team members details -->
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/download (1).png') }}" alt="Your Team's Name">
+                <h3>Bharath L</h3>
+                <p >Passionate web developer creating user-friendly interfaces.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/bharath-l-75068a240/">
+                    <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/bjhnncn">
+                    <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/bharathgowda.l/">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/WhatsApp Image 2024-03-08 at 13.41.22_83d7e7e2.jpg') }}" alt="Your Team's Name">
+                <h3>Nandan</h3>
+                <p>Innovative designer crafting intuitive designs for seamless experiences</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/nandan-nandu-2753a1213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                    <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Nandan1213">
+                    <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_n.a.n.d.a.n._n_/">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/Screenshot (41).png') }}" alt="Your Team's Name">
+                <h3>Hariprasad M </h3>
+                <p>Skilled backend developer building robust systems for optimal performance</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/hari-prasad-m-4864b7281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                    <i class="fab fa-linkedin"></i>
+            
+                    <a href="https://www.instagram.com/hari__prasad.m?igsh=MWd5amZ2NDU1bGlsZg==">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/WhatsApp Image 2024-03-08 at 13.40.24_0f016954.jpg') }}" alt="Your Team's Name">
+                    <h3>Teja Akhil Ram</h3>
+                    <p>Dedicated project manager ensuring timely and budget-friendly deliveries</p>
+                    <div class="social-links">
+            
+                    <a href="https://www.instagram.com/akhilramsimbothula?igsh=MXQxcTBtdm9wN2ZlZA==">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="contactUs">
+        <div class="contact-section">
+            <div class="contact-form">
+                <h2>CONTACT US</h2>
+                <p>We'd love to hear from you.</p>
+                <p>General inquiries, suggestions, or comments, let us know!</p>
+                <form action="https://formspree.io/f/mzbnazdz" method="POST">
+                    <label>
+                        Your email:
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>
+                        Your message:
+                        <textarea name="message" required></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/Bharthgowda.L"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/bharathgowda.l"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AiFitnessApp. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+    
+
+
+</body>
+</html>

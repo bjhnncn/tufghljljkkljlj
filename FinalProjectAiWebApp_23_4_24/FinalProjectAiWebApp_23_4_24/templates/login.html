@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fitness Web App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h1 class="animate__animated">Log in.</h1>
+            <p>Log in with your data that you entered during your registration</p>
+            <form id="loginForm">
+                <input type="email" id="emailInput" placeholder="name@example.com" required>
+                <input type="password" id="passwordInput" placeholder="password?" required>
+                <a href="#" id="forgetPasswordLink">Forget password?</a>
+                <button type="submit">Log in</button>
+                <span id="errorMessage" style="color: red;"></span> <!-- Error message placeholder -->
+            </form>
+            <p>Don't have an account? <a href="javascript:void(0);" onclick="redirectToRegister()">Register</a></p>
+
+        <div class="welcome-section">
+            <h2 class="animate__animated">Nice to see you again</h2>
+            <h1 class="animate__animated">Welcome back</h1>
+            <div class="illustration animate__animated">
+                <!-- Add your illustration SVG or image here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+</body>
+</html>

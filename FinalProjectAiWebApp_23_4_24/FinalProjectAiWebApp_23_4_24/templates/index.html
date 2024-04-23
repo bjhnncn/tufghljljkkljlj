@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fitness Web App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        
+    </style>
+</head>
+<body>
+    <div class="big-heading animate__animated">AI Fitness Web App </div>
+    
+    <div class="container">
+        <h1 class="animate__animated">Let's sign you up.</h1>
+        <p>"AI Fitness: Where Tech Meets Fitness"</p>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="username">UserName</label>
+                <input type="text" id="username" placeholder="Your UserName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="username@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Your Phone Number" pattern="^\d{10}$" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="********" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            </div>
+            
+            <button type="submit">Sign up</button>
+           <p>if Already Registered? <a href="javascript:void(0);" onclick="redirectToRegister()">Login</a></p>
+                </a></p>
+        </form>
+    </div>
+
+    <div id="successMessage" class="animate__animated animate__fadeIn" style="display: none;">
+        <span class="tick">&#10004;</span> Signed up successfully!
+    </div>
+
+    
+    <script src="{{ url_for('static', filename='js/script3.js') }}"></script>    
+        
+</body>
+</html>
